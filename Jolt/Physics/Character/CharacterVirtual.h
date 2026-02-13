@@ -12,6 +12,7 @@
 #include <Jolt/Physics/Collision/ObjectLayer.h>
 #include <Jolt/Physics/Collision/TransformedShape.h>
 #include <Jolt/Core/STLTempAllocator.h>
+#include <Jolt/Core/UnorderedMap.h>
 
 JPH_NAMESPACE_BEGIN
 
@@ -81,6 +82,7 @@ public:
 };
 
 /// This class receives callbacks when a virtual character hits something.
+/// Once created, register it on a CharacterVirtual by using the character's SetListener method.
 class JPH_EXPORT CharacterContactListener
 {
 public:
